@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERTEX ARCHITECTS // PROJECT ARCHIVE</title>
+    <meta name="description" content="Vertex Architects proje arşivi. Seçilmiş konut, iç mekan ve karma kullanım projeleri; lokasyon, yıl ve teknik özetlerle." />
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.vertexarchitects.com/projects.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="VERTEX ARCHITECTS // PROJECT ARCHIVE">
+    <meta property="og:description" content="Seçilmiş projeler arşivi, vaka özleri ve teknik bilgiler.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://www.vertexarchitects.com/projects.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VERTEX ARCHITECTS // PROJECT ARCHIVE">
+    <meta name="twitter:description" content="Seçilmiş projeler arşivi, vaka özleri ve teknik bilgiler.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #121416;
+            --bg-darker: #0b0c0d;
+            --card-bg: rgba(26, 29, 32, 0.85);
+            --panel: rgba(255, 255, 255, 0.03);
+            --text: #f4f1ea;
+            --text-muted: rgba(244, 241, 234, 0.55);
+            --gold: #d4af37;
+            --gold-bright: #dfba5f;
+            --border: rgba(212, 175, 55, 0.18);
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-code: 'Space Mono', monospace;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at top, rgba(212, 175, 55, 0.08), transparent 30%),
+                linear-gradient(180deg, #141619 0%, #0b0c0d 55%, #090a0b 100%);
+            color: var(--text);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 50% 12%, rgba(212, 175, 55, 0.07), transparent 26%),
+                radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.03), transparent 24%),
+                radial-gradient(circle at 80% 12%, rgba(255, 255, 255, 0.025), transparent 20%);
+            opacity: 0.75;
+            z-index: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 7px;
+            opacity: 0.06;
+            mix-blend-mode: overlay;
+            z-index: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .archive-shell {
+            width: min(1240px, calc(100% - 3rem));
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .archive-nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: blur(18px);
+            background: rgba(11, 12, 13, 0.72);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+        }
+
+        .archive-nav-inner {
+            width: min(1240px, calc(100% - 3rem));
+            margin: 0 auto;
+            padding: 1.1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-family: var(--font-code);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
+        .archive-brand {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            letter-spacing: 0.04em;
+        }
+
+        .archive-brand span {
+            color: var(--gold);
+        }
+
+        .archive-link {
+            color: var(--gold-bright);
+        }
+
+        .hero {
+            padding: 5rem 0 2rem 0;
+        }
+
+        .eyebrow {
+            font-family: var(--font-code);
+            font-size: 11px;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--gold-bright);
+            margin-bottom: 1rem;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .archive-lead {
+            display: grid;
+            grid-template-columns: minmax(0, 1.7fr) minmax(320px, 0.9fr);
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-weight: 300;
+            font-size: clamp(3rem, 7vw, 6.6rem);
+            line-height: 0.92;
+            letter-spacing: -0.03em;
+            max-width: 820px;
+        }
+
+        .intro {
+            max-width: none;
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .archive-panel {
+            padding: 1.25rem 1.3rem;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .archive-panel h2 {
+            font-family: var(--font-code);
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold-bright);
+            margin-bottom: 0.85rem;
+        }
+
+        .archive-panel p {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+
+        .archive-panel .panel-line {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-top: 0.75rem;
+            margin-top: 0.75rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            font-family: var(--font-code);
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0 3rem 0;
+        }
+
+        .stat {
+            padding: 1rem 1.1rem;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            background: var(--panel);
+        }
+
+        .stat strong {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat span {
+            font-family: var(--font-code);
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .practice-strip {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .practice-card {
+            padding: 1.1rem 1.15rem;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .practice-card .label {
+            display: block;
+            font-family: var(--font-code);
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold-bright);
+            margin-bottom: 0.5rem;
+        }
+
+        .practice-card .copy {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .chip {
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.14);
+            background: rgba(255, 255, 255, 0.02);
+            font-family: var(--font-code);
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.25rem;
+            padding-bottom: 5rem;
+        }
+
+        .project-card {
+            border: 1px solid rgba(212, 175, 55, 0.14);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+            overflow: hidden;
+            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+            transform: translateY(0);
+        }
+
+        .project-media {
+            aspect-ratio: 16 / 10;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            transition: transform 0.6s ease, filter 0.6s ease;
+            transform: scale(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.28);
+            box-shadow: 0 22px 48px rgba(0, 0, 0, 0.26);
+        }
+
+        .project-card:hover .project-media {
+            transform: scale(1.04);
+            filter: saturate(1.05) contrast(1.03);
+        }
+
+        @media (hover: none) {
+            .project-card:hover,
+            .project-card:hover .project-media {
+                transform: none;
+                box-shadow: none;
+                filter: none;
+            }
+        }
+
+        .project-body {
+            padding: 1.2rem 1.2rem 1.35rem 1.2rem;
+        }
+
+        .project-kicker {
+            font-family: var(--font-code);
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold-bright);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+            font-weight: 500;
+            line-height: 1.05;
+            margin-bottom: 0.9rem;
+            max-width: 16ch;
+        }
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .meta-block {
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .meta-label {
+            display: block;
+            font-family: var(--font-code);
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .meta-value {
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--text);
+        }
+
+        .project-note {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .project-scope {
+            margin-top: 1rem;
+            padding-top: 0.95rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tag {
+            padding: 0.42rem 0.7rem;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            background: rgba(255, 255, 255, 0.02);
+            font-family: var(--font-code);
+            font-size: 9px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .archive-footer {
+            border-top: 1px solid rgba(212, 175, 55, 0.08);
+            padding: 2rem 0 3rem 0;
+            color: var(--text-muted);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .footer-col h2 {
+            font-family: var(--font-code);
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold-bright);
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: var(--text-muted);
+        }
+
+        .footer-col a:hover {
+            color: var(--text);
+        }
+
+        .bottom-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.08);
+            font-family: var(--font-code);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        .back-link {
+            color: var(--gold-bright);
+        }
+
+        @media (max-width: 960px) {
+            .title-row,
+            .archive-lead,
+            .stats,
+            .practice-strip,
+            .project-meta,
+            .footer-grid {
+                grid-template-columns: 1fr;
+                display: grid;
+            }
+
+            .archive-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .title-row {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="archive-nav">
+        <div class="archive-nav-inner">
+            <a class="archive-brand" href="index.html">VERTEX<span>.</span></a>
+            <a class="archive-link" href="index.html">Back to Home</a>
+        </div>
+    </header>
+
+    <main class="archive-shell">
+        <section class="hero">
+            <div class="eyebrow">PROJECT ARCHIVE // SELECTED WORKS</div>
+            <div class="archive-lead">
+                <div>
+                    <div class="title-row">
+                        <h1>Selected works presented as a project index, with disciplined structure and clear client context.</h1>
+                    </div>
+                    <p class="intro">This archive is organized as a working dossier rather than a visual gallery. Every entry communicates location, program, scale, and delivery status in a format suitable for client review and internal reference.</p>
+                </div>
+                <aside class="archive-panel">
+                    <h2>Archive note</h2>
+                    <p>Vertex combines architecture, interiors, and visualization under one studio language. The archive keeps that scope visible through consistent labeling and measured presentation.</p>
+                    <div class="panel-line"><span>Format</span><span>Selected project dossiers</span></div>
+                    <div class="panel-line"><span>Coverage</span><span>Residential / Workplace / Hospitality</span></div>
+                    <div class="panel-line"><span>Update cycle</span><span>2024-2026</span></div>
+                </aside>
+            </div>
+
+            <div class="stats">
+                <div class="stat"><strong>08</strong><span>project dossiers</span></div>
+                <div class="stat"><strong>3</strong><span>delivery families</span></div>
+                <div class="stat"><strong>2024-2026</strong><span>documented range</span></div>
+                <div class="stat"><strong>1</strong><span>studio standard</span></div>
+            </div>
+
+            <div class="practice-strip">
+                <div class="practice-card">
+                    <span class="label">Process</span>
+                    <div class="copy">Concept, design development, and presentation are treated as one continuous editorial workflow.</div>
+                </div>
+                <div class="practice-card">
+                    <span class="label">Scope</span>
+                    <div class="copy">Residential, workplace, hospitality, and visualization work are organized under one studio language.</div>
+                </div>
+                <div class="practice-card">
+                    <span class="label">Delivery</span>
+                    <div class="copy">Each project is documented with scale, location, and a concise technical summary for fast review.</div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="chip">All dossiers</div>
+                <div class="chip">Residential</div>
+                <div class="chip">Hospitality</div>
+                <div class="chip">Interiors</div>
+                <div class="chip">Concept Study</div>
+                <div class="chip">Facade / Envelope</div>
+            </div>
+        </section>
+
+        <section class="archive-grid" aria-label="Selected projects archive">
+            <article class="project-card">
+                <div class="project-media" style="background-image:url('images/project1.png')"></div>
+                <div class="project-body">
+                    <div class="project-kicker">Villa Novum</div>
+                    <div class="project-title">Bodrum Coastal Residence</div>
+                    <div class="project-meta">
+                        <div class="meta-block"><span class="meta-label">Location</span><span class="meta-value">Bodrum, Turkey</span></div>
+                        <div class="meta-block"><span class="meta-label">Year</span><span class="meta-value">2025</span></div>
+                        <div class="meta-block"><span class="meta-label">Scale</span><span class="meta-value">450 m²</span></div>
+                    </div>
+                    <p class="project-note">A compact coastal residence organized around material contrast, indoor-outdoor continuity, and a controlled sea-facing composition.</p>
+                    <div class="project-scope">
+                        <span class="project-tag">Concept design</span>
+                        <span class="project-tag">Architecture</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media" style="background-image:url('images/project2.png')"></div>
+                <div class="project-body">
+                    <div class="project-kicker">Levent Residence</div>
+                    <div class="project-title">Urban Penthouse Renovation</div>
+                    <div class="project-meta">
+                        <div class="meta-block"><span class="meta-label">Location</span><span class="meta-value">Levent, İstanbul</span></div>
+                        <div class="meta-block"><span class="meta-label">Year</span><span class="meta-value">2024</span></div>
+                        <div class="meta-block"><span class="meta-label">Scale</span><span class="meta-value">1,200 m²</span></div>
+                    </div>
+                    <p class="project-note">A penthouse renovation balancing warmth, precision joinery, and a clear hierarchy between public and private zones.</p>
+                    <div class="project-scope">
+                        <span class="project-tag">Residential</span>
+                        <span class="project-tag">Penthouse</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media" style="background-image:url('images/project3.png')"></div>
+                <div class="project-body">
+                    <div class="project-kicker">Coastal Courtyard House</div>
+                    <div class="project-title">Process-Driven Family Villa</div>
+                    <div class="project-meta">
+                        <div class="meta-block"><span class="meta-label">Location</span><span class="meta-value">Çeşme, Turkey</span></div>
+                        <div class="meta-block"><span class="meta-label">Year</span><span class="meta-value">2025</span></div>
+                        <div class="meta-block"><span class="meta-label">Scale</span><span class="meta-value">620 m²</span></div>
+                    </div>
+                    <p class="project-note">Organized around privacy, daylight control, and sheltered terraces calibrated to seasonal occupancy.</p>
+                    <div class="project-scope">
+                        <span class="project-tag">Residential</span>
+                        <span class="project-tag">Site strategy</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media" style="background-image:url('images/project4.png')"></div>
+                <div class="project-body">
+                    <div class="project-kicker">Monolith Office Interior</div>
+                    <div class="project-title">Executive Workplace Fit-Out</div>
+                    <div class="project-meta">
+                        <div class="meta-block"><span class="meta-label">Location</span><span class="meta-value">Maslak, İstanbul</span></div>
+                        <div class="meta-block"><span class="meta-label">Year</span><span class="meta-value">2024</span></div>
+                        <div class="meta-block"><span class="meta-label">Scale</span><span class="meta-value">980 m²</span></div>
+                    </div>
+                    <p class="project-note">A corporate interior with disciplined material contrasts, clear wayfinding, and focused client-facing areas.</p>
+                    <div class="project-scope">
+                        <span class="project-tag">Corporate</span>
+                        <span class="project-tag">Fit-out</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media" style="background-image:url('images/project5.png')"></div>
+                <div class="project-body">
+                    <div class="project-kicker">Gallery House</div>
+                    <div class="project-title">Courtyard Home Study</div>
+                    <div class="project-meta">
+                        <div class="meta-block"><span class="meta-label">Location</span><span class="meta-value">Bursa, Turkey</span></div>
+                        <div class="meta-block"><span class="meta-label">Year</span><span class="meta-value">2025</span></div>
+                        <div class="meta-block"><span class="meta-label">Scale</span><span class="meta-value">540 m²</span></div>
+                    </div>
+                    <p class="project-note">A residential composition where sequence, framing, and curated light create a measured domestic rhythm.</p>
+                    <div class="project-scope">
+                        <span class="project-tag">Residential</span>
+                        <span class="project-tag">Spatial sequence</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media" style="background-image:url('images/project6.png')"></div>
+                <div class="project-body">
+                    <div class="project-kicker">Hospitality Concept</div>
+                    <div class="project-title">Boutique Stay Prototype</div>
+                    <div class="project-meta">
+                        <div class="meta-block"><span class="meta-label">Location</span><span class="meta-value">Antalya, Turkey</span></div>
+                        <div class="meta-block"><span class="meta-label">Year</span><span class="meta-value">2024</span></div>
+                        <div class="meta-block"><span class="meta-label">Scale</span><span class="meta-value">1,650 m²</span></div>
+                    </div>
+                    <p class="project-note">A hospitality concept centered on arrival, spatial calm, and a layered guest journey from lobby to suites.</p>
+                    <div class="project-scope">
+                        <span class="project-tag">Hospitality</span>
+                        <span class="project-tag">Concept package</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media" style="background-image:url('images/project7.png')"></div>
+                <div class="project-body">
+                    <div class="project-kicker">Facade Envelope</div>
+                    <div class="project-title">Shaded Residential Tower</div>
+                    <div class="project-meta">
+                        <div class="meta-block"><span class="meta-label">Location</span><span class="meta-value">İstanbul, Turkey</span></div>
+                        <div class="meta-block"><span class="meta-label">Year</span><span class="meta-value">2026</span></div>
+                        <div class="meta-block"><span class="meta-label">Scale</span><span class="meta-value">Concept</span></div>
+                    </div>
+                    <p class="project-note">An envelope strategy addressing light control, privacy, and a more disciplined urban silhouette.</p>
+                    <div class="project-scope">
+                        <span class="project-tag">Envelope</span>
+                        <span class="project-tag">Urban massing</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media" style="background-image:url('images/project8.png')"></div>
+                <div class="project-body">
+                    <div class="project-kicker">Interior Sequence</div>
+                    <div class="project-title">Vertical Living Study</div>
+                    <div class="project-meta">
+                        <div class="meta-block"><span class="meta-label">Location</span><span class="meta-value">İzmir, Turkey</span></div>
+                        <div class="meta-block"><span class="meta-label">Year</span><span class="meta-value">2026</span></div>
+                        <div class="meta-block"><span class="meta-label">Scale</span><span class="meta-value">760 m²</span></div>
+                    </div>
+                    <p class="project-note">A vertical living proposal with strong circulation, sculpted stairs, and controlled visual connections across levels.</p>
+                    <div class="project-scope">
+                        <span class="project-tag">Interior sequence</span>
+                        <span class="project-tag">Multi-level planning</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <footer class="archive-footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h2>Studio</h2>
+                    <p>Vertex Architects</p>
+                    <p>Levent, İstanbul</p>
+                    <p>Mon-Fri / 09:00-18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Contact</h2>
+                    <a href="mailto:studio@vertexarchitects.com">studio@vertexarchitects.com</a>
+                    <a href="mailto:press@vertexarchitects.com">press@vertexarchitects.com</a>
+                    <a href="mailto:careers@vertexarchitects.com">careers@vertexarchitects.com</a>
+                </div>
+                <div class="footer-col">
+                    <h2>Scope</h2>
+                    <p>Residential architecture</p>
+                    <p>Interiors and workplace design</p>
+                    <p>Visualization and concept development</p>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <span>© 2026 Vertex Architects</span>
+                <a class="back-link" href="index.html">Back to home</a>
+            </div>
+        </footer>
+    </main>
+
+        <script>
+            const cards = document.querySelectorAll('.project-card');
+
+            cards.forEach((card) => {
+                let bounds = card.getBoundingClientRect();
+
+                const refreshBounds = () => {
+                    bounds = card.getBoundingClientRect();
+                };
+
+                card.addEventListener('pointerenter', refreshBounds);
+                window.addEventListener('resize', refreshBounds, { passive: true });
+
+                card.addEventListener('pointermove', (event) => {
+                    const offsetX = ((event.clientX - bounds.left) / bounds.width - 0.5) * 6;
+                    const offsetY = ((event.clientY - bounds.top) / bounds.height - 0.5) * 4;
+                    card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${offsetY * -1}deg) rotateY(${offsetX}deg)`;
+                });
+
+                card.addEventListener('pointerleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        </script>
+</body>
+</html>
